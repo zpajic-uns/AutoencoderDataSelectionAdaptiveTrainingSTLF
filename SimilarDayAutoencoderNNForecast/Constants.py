@@ -1,0 +1,21 @@
+DAY_TO_PREDICT = '2023-08-22'
+MAX_TEMP = 50
+MIN_TEMP = -50
+MAX_LOAD = 8000
+MIN_LOAD = 2000
+MAX_WIND = 25
+MAX_DAYLIGHT_DIFF = 6.803015537979906
+
+AUTOENCODER_INPUT_ATTRIBUTES = ['MinusOneDay_Load', 'Temp']
+AUTOENCODER_CODE_DIMENSION = 40
+
+NN_INPUT_DIM = 24
+SELECT_SORTED_DAYS = True
+LOAD_SAVED_MODEL = False # Change to False for pretraining, True for fine-tuning
+USE_DISTANCES = True
+USE_WEIGHTS = True
+IS_FINE_TUNING = False
+IS_ENSEMBLE_PRETRAINING = True
+NMB_SELECTED_DAYS = 4 # 100 for pretraining, 20 for fine-tuning, 80 for ensemble pretraining
+NMB_EPOCHS = 5000
+MIN_LR = 0.0001 # 0.001 for pretraining, 0.0001 for fine-tuning

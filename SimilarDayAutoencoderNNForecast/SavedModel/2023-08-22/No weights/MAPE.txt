@@ -1,0 +1,1 @@
+Selected days (linear weights) MAPE % = 3.935909988423053
