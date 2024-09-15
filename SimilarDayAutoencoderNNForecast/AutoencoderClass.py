@@ -11,7 +11,6 @@ from SimilarDayAutoencoderNNForecast.PreprocessDayData import DayData
 #from keras.callbacks import TensorBoard
 import numpy as np
 import os
-from MakePreviousDaysData import MakeD1, MakeD2
 
 
 def set_seed(s):
