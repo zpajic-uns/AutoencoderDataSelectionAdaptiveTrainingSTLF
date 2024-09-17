@@ -1,5 +1,5 @@
 # AutoencoderDataSelectionAdaptiveTrainingSTLF
- Autoencoder Data Selection Adaptive Training for Improved Performance and Accuracy of ANN Short-Term Load Forecast in ADMS
+ Autoencoder-Driven Training Data Selection Based on Hidden Features for Improved Accuracy of ANN Short-Term Load Forecasting in ADMS
 
 This repository contains all the data and code to reproduce the research results. Raw input data can be found in:
 SimilarDayAutoencoderNNForecast\InputFiles
