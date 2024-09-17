@@ -2,15 +2,18 @@
  Autoencoder Data Selection Adaptive Training for Improved Performance and Accuracy of ANN Short-Term Load Forecast in ADMS
 
 This repository contains all the data and code to reproduce the research results. Raw input data can be found in:
-- SimilarDayAutoencoderNNForecast\InputFiles
+SimilarDayAutoencoderNNForecast\InputFiles
+
 The results and trained models can be found in main folder:
-- SimilarDayAutoencoderNNForecast\SavedModel
+SimilarDayAutoencoderNNForecast\SavedModel
+
 For every date, there is a separate subfolder with results for different cases from the research. User can reproduce the evaluation if copy the models from the desired subfolder and place them in the main folder, and run the partucular script.
 
 For setting up the virtual environment, please use Requirements.txt in your IDE or with pip install.
 
 ## Configuration of the scripts
 Almost all needed parameters are configured in the Constants.py file. In this chapter, the main configuration parameters are described.
+
 DAY_TO_PREDICT - Used to set the date that will be analyzed and predicted. Used in all scripts to identify day of interest. Example of usage:
 DAY_TO_PREDICT = '2023-08-22'
 
@@ -67,5 +70,6 @@ The whole sequence of the algorithm:
 If DAY_TO_PREDICT is changed, it is enough to run the first four steps once. There is no need to run these four steps furthermore because the intermediate data is stored in files which are used in the rest of the scripts.
 
 ## Using existing trained models to reproduce results
-Place the desired model in the SavedModel directory, copy the name of the model, and change PRETRAINED_MODEL_NAME parameter. Run the scripts for evaluation. 
+Place the desired model in the SavedModel directory, copy the name of the model, and change PRETRAINED_MODEL_NAME parameter. Run the scripts for evaluation.
+
 The EvaluateEnsemble.py script requires four models named 0_model.h5 to 3_model.h5. This can be changed manually if the names are different.
