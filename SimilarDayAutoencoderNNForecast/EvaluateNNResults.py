@@ -1,7 +1,8 @@
 import keras
 import numpy as np
 import tensorflow as tf
-from SimilarDayAutoencoderNNForecast.Constants import DAY_TO_PREDICT, NN_INPUT_DIM, MAX_LOAD, MIN_LOAD
+from SimilarDayAutoencoderNNForecast.Constants import DAY_TO_PREDICT, NN_INPUT_DIM, MAX_LOAD, MIN_LOAD, \
+    PRETRAINED_MODEL_NAME
 from SimilarDayAutoencoderNNForecast.PreprocessDayData import DayData
 from matplotlib import pyplot
 from keras.models import Model, load_model
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     # model_selected = load_model(model_name)
     # assert isinstance(model_selected, Model)
 
-    model_name = 'SavedModel/model-00000884-2.063016-9.734873.h5'
+    model_name = 'SavedModel/' + PRETRAINED_MODEL_NAME
     model_selected_linear_weights = load_model(model_name)
     assert isinstance(model_selected_linear_weights, Model)
 
