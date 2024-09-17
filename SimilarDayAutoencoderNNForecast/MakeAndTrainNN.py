@@ -9,7 +9,7 @@ from keras.models import Sequential
 # from tensorflow import set_random_seed
 from SimilarDayAutoencoderNNForecast.Constants import DAY_TO_PREDICT, NN_INPUT_DIM, SELECT_SORTED_DAYS, \
     NMB_SELECTED_DAYS, NMB_EPOCHS, LOAD_SAVED_MODEL, USE_DISTANCES, USE_WEIGHTS, MIN_LR, IS_FINE_TUNING, \
-    IS_ENSEMBLE_PRETRAINING
+    IS_ENSEMBLE_PRETRAINING, PRETRAINED_MODEL_NAME
 from SimilarDayAutoencoderNNForecast.PreprocessDayData import DayData
 from matplotlib import pyplot
 from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
@@ -152,7 +152,7 @@ if __name__ == '__main__':
         # model.add(Dropout(rate=0.05))
         model.add(Dense(24, activation='relu'))
     else:
-        model_name = 'SavedModel/model-00003921-0.538259-13.090338.h5'
+        model_name = 'SavedModel/' + PRETRAINED_MODEL_NAME
         model = load_model(model_name)
         assert isinstance(model, Model)
 
